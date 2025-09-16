@@ -20,7 +20,7 @@ class animal {
 
 function setup() {
  //create pig
-  let dog= new animal("dog","alex","bhaw bhaw")
+  let dog= new animal("dog","alex","bhaww bhaww")
   //let pig talk
    dog.talk();
    dog.expressYourself();
