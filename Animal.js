@@ -17,3 +17,12 @@ class Animal {
     print("Hello, I'm " + this.breed + " , I say " + this.language);
   }
 }
+
+function setup() {
+  //create black cat
+  let blackcat= new Animal("cat", "blacky", "meowww");
+  
+  //let them talk
+  blackcat.talk();
+  blackcat.expressYourself();
+}
