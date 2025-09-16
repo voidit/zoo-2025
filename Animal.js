@@ -14,7 +14,7 @@ class Animal {
 }
 
 function setup() {
-  let snake = new Animal("snake","lucky","pussssss")
+  let snake = new Animal("snake","lucky","pusssssss")
   snake.talk();
    snake.expressYourself();
 }
