@@ -1,19 +1,28 @@
-class Animal {
-  // special function that takes incoming parameters
-  constructor(breed="Human", name="Nobody", language="silence") {
+class animal {
+  //special funtion that takes incoming parameters
+  constructor(br="human", name="nobody", lang="silence"){
     //personal properties
-    this.breed = breed;
+    this.breed = br;
     this.name = name;
-    this.language = language;
-  }
-
-  // personal function
+    this.language = lang; 
+}
+  
+  //personal function
   talk() {
     print(this.language);
   }
+  
+  expressYourself(){
+    //string concotenation example
+    print("hello, I'm " + this.breed +  " , I say " + this.language);
+}
+}
 
-  expressYourself() {
-    // String concotenation example
-    print("Hello, I'm " + this.breed + " , I say " + this.language);
-  }
+function setup() {
+  //create panda
+  let panda = new animal("panda", "blacky", "rwwww");
+  
+  //let them talk
+  panda.talk();
+  panda.expressYourself(); 
 }
