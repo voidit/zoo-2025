@@ -1,4 +1,4 @@
-class Animal {
+class animal {
   // special function that takes incoming parameters
   constructor(breed="Human", name="Nobody", language="silence") {
     //personal properties
@@ -19,10 +19,10 @@ class Animal {
 }
 
 function setup() {
-  //create black cat
-  let blackcat= new Animal("cat", "blacky", "meowww");
+  //create cow
+  let cow= new animal("cow", "happy", "mmoooooo");
   
   //let them talk
-  blackcat.talk();
-  blackcat.expressYourself();
+  cow.talk();
+  cow.expressYourself();
 }
