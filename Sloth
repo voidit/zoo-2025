@@ -1,0 +1,35 @@
+function setup() {
+  createCanvas(500, 400);
+  background(220);
+}
+
+function draw() {
+  background(200, 230, 200); // soft green background
+
+  // Tree branch
+  stroke(100, 70, 40);
+  strokeWeight(30);
+  line(0, 150, width, 150);
+
+  // Sloth body
+  noStroke();
+  fill(160, 120, 90);
+  ellipse(250, 250, 200, 150); // body
+
+  // Sloth head
+  fill(170, 130, 100);
+  ellipse(250, 180, 120, 100);
+
+  // Eyes
+  fill(90, 60, 40);
+  ellipse(230, 180, 35, 30); // eye patch left
+  ellipse(270, 180, 35, 30); // eye patch right
+
+  fill(255);
+  ellipse(230, 180, 15, 15); // eye left
+  ellipse(270, 180, 15, 15); // eye right
+
+  fill(0);
+  textSize(14);
+  text("Hi, I am a sloth and I feel sleepy", 65, 65);
+}
