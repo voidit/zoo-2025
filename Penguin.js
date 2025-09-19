@@ -1,29 +1,30 @@
-
+// Penguin.js
 const Animal = require("./Animal");
 
 class Penguin extends Animal {
   constructor(name) {
-    super(name || "Pingu"); // default silly penguin name
+    super(name || "Captain Waddle"); // silly default name
     this.species = "Penguin";
-    this.sound = "Honk! 🐧";
+    this.sound = "Honk honk (but in a tuxedo)";
     this.canFly = false;
-    this.slidesOnBelly = true;
+    this.favoriteSnack = "fish popsicle 🍦🐟";
   }
 
   makeSound() {
-    return `${this.name} goes ${this.sound}`;
+    return `${this.name} says: ${this.sound}`;
   }
 
   move() {
-    if (this.slidesOnBelly) {
-      return `${this.name} slides gracefully on its belly across the ice. ❄️`;
-    } else {
-      return `${this.name} waddles awkwardly but adorably.`;
-    }
+    const moves = [
+      `${this.name} belly-slides across the ice like it’s a waterslide. ❄️`,
+      `${this.name} waddles like a chubby little businessman in a tux. 🕴️🐧`,
+      `${this.name} slips, falls, then pretends it was part of the plan.`
+    ];
+    return moves[Math.floor(Math.random() * moves.length)];
   }
 
   specialSkill() {
-    return `${this.name} forms a penguin dance party with its friends. 🕺🐧`;
+    return `${this.name} juggles ${Math.floor(Math.random() * 5) + 1} fish while doing the penguin dance. 🎣🐧`;
   }
 }
 
