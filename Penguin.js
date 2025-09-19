@@ -1,21 +1,31 @@
-import Animal from "./Animal.js";
+
+const Animal = require("./Animal");
 
 class Penguin extends Animal {
-  constructor(name, lang = "Honk") {
-    super("Penguin", name, lang);
+  constructor(name) {
+    super(name || "Pingu"); // default silly penguin name
+    this.species = "Penguin";
+    this.sound = "Honk! 🐧";
+    this.canFly = false;
+    this.slidesOnBelly = true;
   }
 
-  swim() {
-    console.log(`${this.name} glides smoothly through the water.`);
+  makeSound() {
+    return `${this.name} goes ${this.sound}`;
   }
 
-  waddle() {
-    console.log(`${this.name} waddles adorably on the ice.`);
+  move() {
+    if (this.slidesOnBelly) {
+      return `${this.name} slides gracefully on its belly across the ice. ❄️`;
+    } else {
+      return `${this.name} waddles awkwardly but adorably.`;
+    }
   }
 
-  sleep() {
-    console.log(`${this.name} sleeps huddled with other penguins.`);
+  specialSkill() {
+    return `${this.name} forms a penguin dance party with its friends. 🕺🐧`;
   }
 }
 
-export default Penguin;
+module.exports = Penguin;
+
