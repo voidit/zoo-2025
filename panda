@@ -1,0 +1,16 @@
+class Panda extends Animal {
+  // overwrite parent constructor
+  constructor(name, language, bambooPreference = "high") {
+    // Call parent constructor with Panda as breed
+    super("Panda", name, language = "grrrr");
+    
+    // personal class property
+    this.bambooPreference = bambooPreference;
+  }
+
+  // overwrite parent function
+  talk() {
+    print(`I'm a ${this.breed}, I love bamboo (${this.bambooPreference} preference). 
+My name is ${this.name}...${this.language}`);
+  }
+}
