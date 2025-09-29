@@ -1,0 +1,16 @@
+class Unicorn extends Animal {
+  // overwrite parent constructor
+  constructor(name, language, hornColor = "rainbow") {
+    // create a clone of parent
+    super("Unicorn", name, language = "neighhh~✨"); // call parent constructor
+
+    // personal class property
+    this.hornColor = hornColor;
+  }
+
+  // overwrite parent function
+  talk() {
+    // Another way of String concatenation
+    console.log(`I'm a ${this.breed}, my horn is ${this.hornColor}, my name is ${this.name}... ${this.language}`);
+  }
+}
